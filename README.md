@@ -1,5 +1,5 @@
 
-*RU
+# RU
 
 Программа предназначена для переключения раскладки клавиатуры с помощью кнопок Left Control и Right Control. Left Control соответствует английскому языку, Right Control - русскому. Таким образом, вы можете переключиться на правильную раскладку не зная какая сейчас раскладка активна, но разумеется зная, на каком языке вы собираетесь печатать. Это очень актуально для современных больших дисплеев с большим разрешением, поскольку фокус внимания на task-bar стал сейчас меньше. 
 
@@ -9,10 +9,7 @@
 
 Однозначный способ переключения раскладки клавиатуры полезен для здоровья, и позволяет меньше напрягаться при использовании компьютера.
 
-
-
-
-*DE
+# DE
 
 Das Programm ist so konzipiert, dass die Tastaturbelegung mit den Tasten LCtrl und RCtrl umgeschaltet werden kann. Die linke Steuerung entspricht der englischen Sprache, die rechte Steuerung - der russischen Sprache. So können Sie auf das richtige Layout umschalten, ohne zu wissen, welches Layout gerade aktiv ist, aber natürlich wissen Sie, in welcher Sprache Sie tippen werden. Dies ist für moderne große Bildschirme mit hoher Auflösung sehr wichtig, da der Fokus der Aufmerksamkeit auf die Task-Leiste nun geringer ist. 
 
@@ -22,10 +19,7 @@ Das Programm Mahou, das in Bezug auf die Umschaltung des Tastaturlayouts ähnlic
 
 Eine einstellige Möglichkeit zum Umschalten der Tastaturbelegung ist gesund und sorgt für weniger Stress bei der Benutzung Ihres Computers.
 
-
-
-
-*EN
+# EN
 
 The programme is designed to switch keyboard layout using Left Control and Right Control buttons. Left Control corresponds to the English language, Right Control - to the Russian language. Thus, you can switch to the correct layout without knowing which layout is active now, but of course knowing what language you are going to type in. This is very relevant for modern large displays with high resolution, as the focus of attention on the task-bar is now less. 
 
@@ -35,7 +29,7 @@ The Mahou programme, which is similar in terms of keyboard layout switching, is 
 
 An unambiguous way to switch keyboard layout is healthy, and allows you to use your computer with less stress.
 
-*CH-simpl
+# CH-simpl
 
 该程序可通过 LCtrl 和 RCtrl 按钮切换键盘布局。左控制键对应英语，右控制键对应俄语。因此，您可以切换到正确的布局，而无需知道现在使用的是哪种布局，当然也要知道您要输入的语言。这对于现代高分辨率的大型显示器来说非常重要，因为现在对任务栏的关注已经减少了。
 
