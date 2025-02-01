@@ -27,7 +27,7 @@ The programme is designed to switch keyboard layout using Left Control and Right
 The Mahou programme, which is similar in terms of keyboard layout switching, is very glitchy and freezes/blocks. There is also a similar (in terms of keyboard layout switching) programme punto switcher, which works through dirty hooks, because of which many software can hang. The same programme ‘mahou_replacement_custom_ctrl_key_lang_switcher’ or simply ‘keyswitcher’ works through simple periodic polling of pressed keys, and the unambiguousness of switching is based on Windows setting to use Ctrl-9 and Ctrl-0 combinations. However, these settings may disappear when Windows reboots, or may not appear immediately (This is an MS Windows problem, contact Microsoft for support, but you can also provide recipes to workaround this MS Windows problem).
 
 
-An unambiguous way to switch keyboard layout is healthy, and allows you to use your computer with less stress.
+An unambiguous way to switch keyboard layout is healthy, cuz it allows you to use your computer with less stress.
 
 # CH-simpl
 
