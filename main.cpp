@@ -59,44 +59,58 @@ void alt_switch(void) {
 void alt_switch_ctrl9(void) {
 //    Альтернативный способ с использованием SendInput:
 //    SendInput — это более современный и гибкий способ эмуляции ввода. Вот пример:
-    INPUT inputs[4] = {};
+    INPUT inputs[6] = {};
     // Нажатие VK_CONTROL
     inputs[0].type = INPUT_KEYBOARD;
     inputs[0].ki.wVk = VK_CONTROL;
-    // Нажатие 9
+    // Нажатие VK_SHIFT
     inputs[1].type = INPUT_KEYBOARD;
-    inputs[1].ki.wVk = 0x39; //  	9 клавиш
-    // Отпускание 9
+    inputs[1].ki.wVk = VK_SHIFT;
+    // Нажатие 9
     inputs[2].type = INPUT_KEYBOARD;
-    inputs[2].ki.wVk = 0x39;
-    inputs[2].ki.dwFlags = KEYEVENTF_KEYUP;
-    // Отпускание VK_CONTROL
+    inputs[2].ki.wVk = 0x39; //  	9 клавиш
+    // Отпускание 9
     inputs[3].type = INPUT_KEYBOARD;
-    inputs[3].ki.wVk = VK_CONTROL;
+    inputs[3].ki.wVk = 0x39;
     inputs[3].ki.dwFlags = KEYEVENTF_KEYUP;
+    // Отпускание VK_SHIFT
+    inputs[4].type = INPUT_KEYBOARD;
+    inputs[4].ki.wVk = VK_SHIFT;
+    inputs[4].ki.dwFlags = KEYEVENTF_KEYUP;
+    // Отпускание VK_CONTROL
+    inputs[5].type = INPUT_KEYBOARD;
+    inputs[5].ki.wVk = VK_CONTROL;
+    inputs[5].ki.dwFlags = KEYEVENTF_KEYUP;
     // Отправка всех событий
-    SendInput(4, inputs, sizeof(INPUT));
+    SendInput(6, inputs, sizeof(INPUT));
 }
 void alt_switch_ctrl0(void) {
 //    Альтернативный способ с использованием SendInput:
 //    SendInput — это более современный и гибкий способ эмуляции ввода. Вот пример:
-    INPUT inputs[4] = {};
+    INPUT inputs[6] = {};
     // Нажатие VK_CONTROL
     inputs[0].type = INPUT_KEYBOARD;
     inputs[0].ki.wVk = VK_CONTROL;
-    // Нажатие 0
+    // Нажатие VK_SHIFT
     inputs[1].type = INPUT_KEYBOARD;
-    inputs[1].ki.wVk = 0x30; //  	0 клавиш
-    // Отпускание 0
+    inputs[1].ki.wVk = VK_SHIFT;
+    // Нажатие 0
     inputs[2].type = INPUT_KEYBOARD;
-    inputs[2].ki.wVk = 0x30;
-    inputs[2].ki.dwFlags = KEYEVENTF_KEYUP;
-    // Отпускание VK_CONTROL
+    inputs[2].ki.wVk = 0x30; //  	0 клавиша
+    // Отпускание 0
     inputs[3].type = INPUT_KEYBOARD;
-    inputs[3].ki.wVk = VK_CONTROL;
+    inputs[3].ki.wVk = 0x30;
     inputs[3].ki.dwFlags = KEYEVENTF_KEYUP;
+    // Отпускание VK_SHIFT
+    inputs[4].type = INPUT_KEYBOARD;
+    inputs[4].ki.wVk = VK_SHIFT;
+    inputs[4].ki.dwFlags = KEYEVENTF_KEYUP;
+    // Отпускание VK_CONTROL
+    inputs[5].type = INPUT_KEYBOARD;
+    inputs[5].ki.wVk = VK_CONTROL;
+    inputs[5].ki.dwFlags = KEYEVENTF_KEYUP;
     // Отправка всех событий
-    SendInput(4, inputs, sizeof(INPUT));
+    SendInput(6, inputs, sizeof(INPUT));
 }
 
 int state_key_after_send=0;
