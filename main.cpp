@@ -5,6 +5,12 @@ bool isKeyPressed(int vkCode) {
     return (GetAsyncKeyState(vkCode) & 0x8000) != 0;
 }
 
+uint64_t MOUSEWHEEL_flag=1;
+void set_MOUSEWHEEL_flag(void)
+{
+    MOUSEWHEEL_flag = 1;
+}
+
 void isAnyOtherKeyPressed(int *anyother_cnt, int *lctrl_cnt, int *rctrl_cnt, int *nokeys_cnt) {
     // Проверяем все виртуальные коды клавиш (от 0x01 до 0xFE)
     int vkCode = 0x01;
@@ -22,6 +28,27 @@ void isAnyOtherKeyPressed(int *anyother_cnt, int *lctrl_cnt, int *rctrl_cnt, int
                 (*anyother_cnt)++;
         }
     }
+
+    // Проверка нажатия левой кнопки мыши
+    if (GetAsyncKeyState(VK_LBUTTON) & 0x8000) {
+        pressed_smthgs = 1;
+        (*anyother_cnt)++;
+    }
+    if (GetAsyncKeyState(VK_RBUTTON) & 0x8000) {
+        pressed_smthgs = 1;
+        (*anyother_cnt)++;
+    }
+    if (GetAsyncKeyState(VK_MBUTTON) & 0x8000) {
+        pressed_smthgs = 1;
+        (*anyother_cnt)++;
+    }
+    if (MOUSEWHEEL_flag)
+    {
+        MOUSEWHEEL_flag = 0;
+        pressed_smthgs = 1;
+        (*anyother_cnt)++;
+    }
+
     if (!pressed_smthgs)
         (*nokeys_cnt)++;
 }

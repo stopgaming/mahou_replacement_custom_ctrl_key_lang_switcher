@@ -89,6 +89,8 @@ void updateicon2(void) {
     //currentLetter = (currentLetter == 'A') ? 'B' : 'A';
 }
 
+extern void set_MOUSEWHEEL_flag(void);
+
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg) {
         case WM_CREATE:
@@ -124,6 +126,16 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             Shell_NotifyIcon(NIM_DELETE, &nid);
             PostQuitMessage(0);
             break;
+/*
+ //
+        case WM_MOUSEWHEEL: {
+            short delta = GET_WHEEL_DELTA_WPARAM(wParam);
+            if (delta != 0) {
+                set_MOUSEWHEEL_flag();
+            }
+        }
+            break;
+            */
 
         default:
             return DefWindowProc(hwnd, msg, wParam, lParam);
