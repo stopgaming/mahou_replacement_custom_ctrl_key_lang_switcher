@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <cstdint>
 
 bool isKeyPressed(int vkCode) {
     return (GetAsyncKeyState(vkCode) & 0x8000) != 0;
